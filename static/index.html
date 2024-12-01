@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil_AsSvg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="select-container">
+            <h1>Brazil Map</h1>
+            <label for="estado">Estados:</label>
+            <select id="estado" onchange="carregarMunicipios()">
+                <option value="">Selecione um estado</option>
+            </select>
+            <label for="municipio">Municípios:</label>
+            <select id="municipio" onchange="carregarSVG()">
+                <option value="">Selecione um município</option>
+            </select>
+        </div>
+        <div class="map-container">
+            <svg id="mapa" width="300" height="300" viewBox="">
+                <path id="estado" d="" fill="white" stroke="black" stroke-width="0.01" />
+                <path id="municipio" d="" fill="blue" stroke="black" stroke-width="0.01" />
+            </svg>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
